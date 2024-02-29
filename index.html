@@ -68,19 +68,30 @@
     var preload = {
         type: jsPsychPreload,
         auto_preload: true,
-        video: [
-                'resources/1.mp4',
-                'resources/10.mp4',
-                'resources/11.mp4',
-                'resources/12.mp4',
-                'resources/2.mp4',
-                'resources/3.mp4',
-                'resources/4.mp4',
-                'resources/5.mp4',
-                'resources/6.mp4',
-                'resources/7.mp4',
-                'resources/8.mp4',
-                'resources/9.mp4'],
+        video: ['resources/1.mp4',
+                'resources/1000.mp4',
+                'resources/1006.mp4',
+                'resources/1011.mp4',
+                'resources/1013.mp4',
+                'resources/1025.mp4',
+                'resources/1037.mp4',
+                'resources/1042.mp4',
+                'resources/1060.mp4',
+                'resources/1066.mp4',
+                'resources/1068.mp4',
+                'resources/1089.mp4',
+                'resources/1110.mp4',
+                'resources/1164.mp4',
+                'resources/1172.mp4',
+                'resources/1175.mp4',
+                'resources/1183.mp4',
+                'resources/1184.mp4',
+                'resources/1227.mp4',
+                'resources/1253.mp4',
+                'resources/1278.mp4',
+                'resources/1291.mp4',
+                'resources/1302.mp4',
+                'resources/7.mp4'],
         show_progress_bar: true,
         message: "Loading experiment files...",
         error_message: "Oops! There's a problem loading files. Please refresh the page to try again."
@@ -89,42 +100,77 @@
     
 
       
-    var faces = [{face:'resources/1.mp4'},
-                {face:'resources/10.mp4'},
-                {face:'resources/11.mp4'},
-                {face:'resources/12.mp4'},
-                {face:'resources/2.mp4'},
-                {face:'resources/3.mp4'},
-                {face:'resources/4.mp4'},
-                {face:'resources/5.mp4'},
-                {face:'resources/6.mp4'},
-                {face:'resources/7.mp4'},
-                {face:'resources/8.mp4'},
-                {face:'resources/9.mp4'}];
+    var faces = [{face: 'resources/1.mp4'},
+                {face: 'resources/1000.mp4'},
+                {face: 'resources/1006.mp4'},
+                {face: 'resources/1011.mp4'},
+                {face: 'resources/1013.mp4'},
+                {face: 'resources/1025.mp4'},
+                {face: 'resources/1037.mp4'},
+                {face: 'resources/1042.mp4'},
+                {face: 'resources/1060.mp4'},
+                {face: 'resources/1066.mp4'},
+                {face: 'resources/1068.mp4'},
+                {face: 'resources/1089.mp4'},
+                {face: 'resources/1110.mp4'},
+                {face: 'resources/1164.mp4'},
+                {face: 'resources/1172.mp4'},
+                {face: 'resources/1175.mp4'},
+                {face: 'resources/1183.mp4'},
+                {face: 'resources/1184.mp4'},
+                {face: 'resources/1227.mp4'},
+                {face: 'resources/1253.mp4'},
+                {face: 'resources/1278.mp4'},
+                {face: 'resources/1291.mp4'},
+                {face: 'resources/1302.mp4'},
+                {face: 'resources/7.mp4'}];
       
       //using this array instead of the named variable array above in order to work with custom functions
       var faces_arr = ['resources/1.mp4',
-                        'resources/10.mp4',
-                        'resources/11.mp4',
-                        'resources/12.mp4',
-                        'resources/2.mp4',
-                        'resources/3.mp4',
-                        'resources/4.mp4',
-                        'resources/5.mp4',
-                        'resources/6.mp4',
-                        'resources/7.mp4',
-                        'resources/8.mp4',
-                        'resources/9.mp4'];
+                        'resources/1000.mp4',
+                        'resources/1006.mp4',
+                        'resources/1011.mp4',
+                        'resources/1013.mp4',
+                        'resources/1025.mp4',
+                        'resources/1037.mp4',
+                        'resources/1042.mp4',
+                        'resources/1060.mp4',
+                        'resources/1066.mp4',
+                        'resources/1068.mp4',
+                        'resources/1089.mp4',
+                        'resources/1110.mp4',
+                        'resources/1164.mp4',
+                        'resources/1172.mp4',
+                        'resources/1175.mp4',
+                        'resources/1183.mp4',
+                        'resources/1184.mp4',
+                        'resources/1227.mp4',
+                        'resources/1253.mp4',
+                        'resources/1278.mp4',
+                        'resources/1291.mp4',
+                        'resources/1302.mp4',
+                        'resources/7.mp4'];
       
       // we decided to define validation triplets
-        var validation_triplets = [{head: 'resources/1.mp4',choice_1: 'resources/2.mp4',choice_2: 'resources/3.mp4'},
-            {head: 'resources/4.mp4',choice_1: 'resources/5.mp4',choice_2:'resources/6.mp4'}];
+        var validation_triplets = [
+        {target: 'resources/1175.mp4',	choice_1: 'resources/1291.mp4',	choice_2: 'resources/1013.mp4'},
+        {target: 'resources/1089.mp4',	choice_1: 'resources/1172.mp4',	choice_2: 'resources/1060.mp4'},
+        {target: 'resources/1013.mp4',	choice_1: 'resources/1025.mp4',	choice_2: 'resources/1175.mp4'},
+        {target: 'resources/1011.mp4',	choice_1: 'resources/1000.mp4',	choice_2: 'resources/1037.mp4'},
+        {target: 'resources/1291.mp4',	choice_1: 'resources/1025.mp4',	choice_2: 'resources/1172.mp4'},
+        {target: 'resources/1164.mp4',	choice_1: 'resources/1253.mp4',	choice_2: 'resources/7.mp4'},
+        {target: 'resources/7.mp4',	choice_1: 'resources/1011.mp4',	choice_2: 'resources/1302.mp4'},
+        {target: 'resources/1278.mp4',	choice_1: 'resources/1042.mp4',	choice_2: 'resources/1253.mp4'},
+        {target: 'resources/7.mp4',	choice_1: 'resources/1006.mp4',	choice_2: 'resources/1011.mp4'},
+        {target: 'resources/1013.mp4',	choice_1: 'resources/1000.mp4',	choice_2: 'resources/1172.mp4'}];
 
       
       
       var check_triplets=[
-            {head: 'resources/1.mp4',choice_1: 'resources/2.mp4',choice_2: 'resources/1.mp4', correct_choice: 'j'},
-            {head: 'resources/4.mp4',choice_1: 'resources/4.mp4',choice_2:'resources/5.mp4', correct_choice: 'f'}];
+            {head: 'resources/1068.mp4',choice_1: 'resources/1011.mp4',choice_2: 'resources/1068.mp4', correct_choice: 'j'},
+            {head: 'resources/1253.mp4',choice_1: 'resources/1253.mp4',choice_2:'resources/1.mp4', correct_choice: 'f'},
+      
+      ];
       
    //to shuffle the array of button choices at the beginning of the experiment   
     function shuffle(array) {
@@ -151,14 +197,6 @@
         return temp_array;
     }
       
-      
-    /* define welcome message trial */
-    var welcome = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: "Welcome to the experiment. Press any key to begin."
-    };
-    timeline.push(welcome);
-      
       // going fullscreen
     timeline.push({
       type: jsPsychFullscreen,
@@ -174,12 +212,22 @@
     timeline.push(consent);
       
       
+
+//    In this experiment, you will be watching a video of a face making an expression, then judging which of two other videos of facial expression are most similar to this first target video. 
+//
+//    What is a facial expression?
+//    Facial expressions are configurations of different small muscle movements in the face. People often use them to convey feelings or information to others.
+//
+//    In this experiment we are only interested in <the specific facial movements / the feelings the person is communicating / the information the person is communicating>. Please make your similarity judgments only based on the similarity of <the specific facial movements / the feelings each person is communicating / the information each person is communicating>
+
+
           
     // define testing instructions 
     var instructions = {
       type: jsPsychHtmlButtonResponse,
-      stimulus: "<p>In each trial of this task, you will see three video clips of emotional expressions: one reference clip on top, and two choices beneath the reference clip." +
-        "</p><p><strong>For each trial, please <u>select the clip with the facial expression closest to the expression of the face in the reference clip</u>.</strong>"+
+      stimulus: "<p>In this experiment, you will be watching a video of a face making an expression,<br> then judging which of two other videos of facial expression beneath it are most similar to this first video." +
+        "<p><strong> What is a facial expression? </strong>Facial expressions are configurations of different small muscle movements in the face.<br> People often use them to convey feelings or information to others." +
+        "<p>In this experiment we are only interested in <strong>the specific message</strong> they communicate<br>. Please make your similarity judgments only based on the similarity of the specific message communicated."+
           "<p>Click 'Continue' to begin the test.</p>",
         choices: ["Continue"],
       post_trial_gap: 2000
@@ -247,7 +295,7 @@
       // define the trials!
       var validation_trial = {
           type: jsPsychVideoKeyboardResponse,
-            stimulus: [jsPsych.timelineVariable('head')],    // IF YOU CHANGED THE OBJECT NAMES IN YOUR ARRAY ABOVE, CHANGE THEM HERE TO MATCH     
+            stimulus: [jsPsych.timelineVariable('target')],    // IF YOU CHANGED THE OBJECT NAMES IN YOUR ARRAY ABOVE, CHANGE THEM HERE TO MATCH     
              prompt: function(){
                 arr_pair = [jsPsych.timelineVariable('choice_1'), jsPsych.timelineVariable('choice_2')];
                  
@@ -262,7 +310,7 @@
                 html += 'Your browser does not support the video tag.';
                 html += '</video>';
                 html += '</div>';
-                html += '<br>Which is more similar to the video on top? <br><strong>Press "f" for the video on the left. Press "j" for the video on the right.';
+                html += '<br>Which is more similar to the video on top based on <strong> specific message communicated</strong>? <br><strong>Press "f" for the video on the left. Press "j" for the video on the right.';
                 return html;
             },
             height: 400,
@@ -301,7 +349,7 @@
                 html += 'Your browser does not support the video tag.';
                 html += '</video>';
                 html += '</div>';
-                html += '<br>Which is more similar to the video on top? <br><strong>Press "f" for the video on the left. Press "j" for the video on the right.';
+                html += '<br>Which is more similar to the video on top based on <strong> specific message communicated</strong>? <br><strong>Press "f" for the video on the left. Press "j" for the video on the right.';
                 return html;
             },
             height: 400,
@@ -387,7 +435,7 @@
         timeline_variables: validation_triplets,
         sample :{
             type: 'without-replacement',
-            size: 1 // CHANGE THIS if you want a different number of validation trials per block
+            size: 10 // CHANGE THIS if you want a different number of validation trials per block
         }
     };
 
@@ -397,7 +445,7 @@
         randomize_order: true,
         sample: {
             type: 'with-replacement',
-            size: 1 // CHANGE THIS if you want a different number of regular trials per block
+            size: 40 // CHANGE THIS if you want a different number of regular trials per block
         }
     };
 
@@ -415,23 +463,20 @@
     var block_procedure = {
         timeline: [trial_procedure, check_procedure, validation_procedure],
         randomize_order: true,
-        repetitions: 1 // CHANGE THIS if you want a different number of all trials
+        repetitions: 2 // CHANGE THIS if you want a different number of all trials
     };
 
-    // total number of trials = (40*5) + (10*5) + (1*5) = 255 trials
 
       
     var quick_break = {
       type: jsPsychHtmlButtonResponse,
-      stimulus: "Nice job! Feel free to take a quick break, then click 'Continue' when you are ready proceed to the next round." +
-        "<p>Remember, your task is to <strong>select the face with the <u>facial expression</u> closest to the expression of the face on top.</strong>",
+      stimulus: "Nice job! Feel free to take a quick break, then click 'Continue' when you are ready proceed to the next round.",
         choices: ["Continue"]
     };
       
       
       timeline.push(block_procedure);
-      timeline.push(quick_break);
-      timeline.push(block_procedure);
+
     
 
 
